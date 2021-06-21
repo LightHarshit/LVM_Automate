@@ -10,9 +10,9 @@ out,err = sp.communicate()
 if(success_code == 0):
     print(f'List of all Physical Volumes : \n{out}')
     print('\n')
-    cmd = 'vgcreate'
+    cmd = 'vgcreate '
     vg_name = input('Enter the name of the volume group you want to create : ')
-    cmd = cmd + vg_create + ' '
+    cmd = cmd + vg_name + ' '
     n = input('Enter the number of physical volumes you want to include : ')
     for x in range(int(n)):
         pv = input('Enter the name of the physical volume {} (ex. sdb1) : '.format(x+1))
